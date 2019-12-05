@@ -5,11 +5,11 @@ import store from './store'
 import './assets/tailwind.css'
 
 Vue.config.productionTip = false;
-Vue.use(vuex);
+Vue.use(store);
 Vue.use(router);
 
 new Vue({
   router,
   store,
   render: h => h(App)
-}).$mount('#app')
+}).$mount('#app');
