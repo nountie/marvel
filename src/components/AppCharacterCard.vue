@@ -29,9 +29,6 @@
             type: Boolean
           }
         },
-      created() {
-          console.log('Halo', this.character);
-      }
     }
 </script>
 
