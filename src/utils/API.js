@@ -1,7 +1,7 @@
 import axios from "axios";
 import md5 from "md5";
 
-const baseDomain = "http://gateway.marvel.com";
+const baseDomain = "https://gateway.marvel.com";
 const baseURL = `${baseDomain}/v1/public`;
 
 export default {
