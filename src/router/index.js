@@ -40,8 +40,7 @@ const routes = [
 
 const router = new VueRouter({
   routes,
-  base: '/marvel/',
-  mode: 'history'
+  base: '/',
 });
 
 
