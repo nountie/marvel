@@ -7,7 +7,7 @@ const baseURL = `${baseDomain}/v1/public`;
 export default {
   $http: axios.create({
     baseURL,
-    timeout: 5000
+    timeout: 25000
   }),
   setConfig: (params = {}) => ({
     params: {
