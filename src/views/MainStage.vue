@@ -12,6 +12,7 @@
                   :class="{'previewImg': previewMode, 'preview': previewMode }"
                   :character="character"
                   :key="character.id"
+                  :active="previewMode"
                   v-for="character in chosenCharacters"
                 />
             </transition-group>
@@ -26,7 +27,6 @@
             </transition>
             <BasePagination v-if="!previewMode" :characters-on-page="chosenCharacters.length" :page-number="page"/>
 
-            <p v-if="this.isLoading && !previewMode" class="text-white text-5xl font-bold bg-gray-700 pt-3 pb-4 px-5 text-center position-center absolute">Loading...</p>
         </div>
 
     </div>
@@ -95,9 +95,6 @@
         if(newId === null) this.previewMode = false;
         else this.previewMode = true;
       },
-      fetch() {
-          this.getPage(this.page);
-      },
       async getPage(pageNumber, text = '') {
           this.isLoading = true;
           await this.getCharactersList({pageNumber, text});
@@ -107,7 +104,7 @@
     created() {
       if(this.id !== 0) {
         this.previewToggle(this.id);
-      } else this.fetch();
+      } else this.getPage(this.page);
     }
   }
 </script>

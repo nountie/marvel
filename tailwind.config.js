@@ -146,6 +146,7 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '68': '17rem',
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -328,6 +329,7 @@ module.exports = {
     },
     minHeight: {
       '0': '0',
+      '40': '10rem',
       full: '100%',
       screen: '100vh',
       '500': '500px'
